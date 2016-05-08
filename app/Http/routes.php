@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ShowController@index');
+
+Route::get('/show/{showid}', 'ShowController@show' );
+
+Route::get('/shows/{page}', 'ShowController@shows');
+
+Route::get('/search/{query}', 'ShowController@search');
